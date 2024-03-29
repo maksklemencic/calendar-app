@@ -1,0 +1,50 @@
+/* src/components/Calendar/styles.module.css */
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* Creates a 7-column grid */
+    gap: 5px; /* Space between grid items */
+    padding: 10px;
+    background-color: var(--background-color); /* Light grey background */
+    border-radius: 8px; /* Rounded corners for the grid container */
+}
+
+.day, .blank {
+    min-height: 50px; /* Minimum height for each day cell */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff; /* White background for day cells */
+    border-radius: 5px; /* Rounded corners for day cells */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.day:hover {
+    background-color: #f0f0f0; /* Light grey background on hover */
+}
+
+.day, .blank {
+    background-color: var(--primary-color);
+}
+
+.blank {
+    background-color: transparent; /* No background for blank cells */
+    cursor: default; /* Default cursor for blank cells */
+}
+
+
+.sunday, .holiday {
+    background-color: var(--highlight-color);
+}
+/* Additional styling for the month and year selectors for a cohesive look */
+select, input[type="number"] {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 10px; /* Space between selectors */
+}
+
+input[type="number"] {
+    width: 80px; /* Fixed width for the year input */
+}
